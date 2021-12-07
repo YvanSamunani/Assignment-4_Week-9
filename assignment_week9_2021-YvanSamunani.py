@@ -40,5 +40,8 @@ books_table = pd.DataFrame(
 # Sorting the prices in a descending order
 books_table.sort_values("Prices", axis= 0, ascending = True, inplace = True, na_position = 'last')
 
+# Selecting top 10 expensive books after sorting the prices in a descending order
+Top10_books = (books_table.head(10))
+
 # Printing the table with book names, reviews and their prices.
-print(books_table)
+print(Top10_books)
